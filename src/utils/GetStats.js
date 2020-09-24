@@ -11,8 +11,6 @@ const GetStats = (url) => {
 
       if (url === "https://covid2019-api.herokuapp.com/v2/total") {
         setStats(data.data);
-      } else if (url === "https://covid.mathdro.id/api") {
-        setStats(data);
       } else {
         setStats(data.countries);
       }
