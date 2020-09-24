@@ -9,10 +9,14 @@ const GetStats = (url) => {
         .then((res) => res.json())
         .catch((err) => console.log(err));
 
-      if (url === "https://covid2019-api.herokuapp.com/v2/total") {
-        setStats(data.data);
-      } else {
+      if (url === "https://covid2019-api.herokuapp.com/countries") {
         setStats(data.countries);
+      } else if (
+        url.includes("https://covid2019-api.herokuapp.com/v2/country/")
+      ) {
+        setStats(data);
+      } else {
+        setStats(data.data);
       }
     };
 

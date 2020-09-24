@@ -4,6 +4,7 @@ import "./App.css";
 import GlobalStats from "./components/GlobalStats";
 import GetStats from "./utils/GetStats";
 import CountrySelector from "./components/CountrySelector";
+import CountryStats from "./components/CountryStats";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <h1>Covid Tracker</h1>
       <GlobalStats />
       <CountrySelector />
+      <CountryStats />
     </div>
   );
 };
